@@ -1,2 +1,2 @@
-print('Welcome to script1.')
+print('Hi! Welcome to script1.')
 print('My modification.')
