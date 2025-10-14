@@ -1,10 +1,3 @@
-# dop\_2025
+# Data Oriented Programming
 
-
-
-Second change
-
-Third change
-
-Forth change
-
+Tutorial project for Data Oriented Programming classes. 
