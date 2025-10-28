@@ -1,0 +1,3 @@
+[submodule "dop_2025_sub"]
+	path = dop_2025_sub
+	url = https://github.com/jprzew/dop_2025_sub.git
