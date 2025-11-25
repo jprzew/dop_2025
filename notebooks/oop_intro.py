@@ -44,14 +44,16 @@ class ComplexNumber:
     def __repr__(self):
         return f"{self.real} + {self.imag}i"
 
-    def __add__(self, other: ComplexNumber) -> ComplexNumber:
+    def __add__(self, other: 'ComplexNumber') -> 'ComplexNumber':
 
         if not isinstance(other, ComplexNumber):
             raise ValueError('The second argument should be a complex number')
+
+        return type(self)(self.real + other.real, self.imag + other.imag)
         
         return ComplexNumber(self.real + other.real, self.imag + other.imag)
 
-    def __mul__(self, other: ComplexNumber) -> ComplexNumber:
+    def __mul__(self, other: 'ComplexNumber') -> 'ComplexNumber':
         r = self.real * other.real - self.imag * other.imag
         i = self.real * other.imag + self.imag * other.real
         return ComplexNumber(r, i)
@@ -63,39 +65,56 @@ class ComplexNumber:
     def angle(self) -> float:
         return math.atan2(self.imag, self.real)
 
-    def nth_root(self, n):
+    def nth_root(self, n) -> list:
         r = abs(self)
         theta = self.angle
-        roots = []
-        for k in range(n):
-            angle = (theta + 2 * math.pi * k) / n
-            magnitude = r ** (1 / n)
-            roots.append(
-                ComplexNumber(
-                    magnitude * math.cos(angle),
-                    magnitude * math.sin(angle)
-                )
-            )
+
+        starting_angle = theta / n
+        magnitude = r ** (1 / n)
+
+        angles = [starting_angle + 2 * math.pi * k / n for k in range(n)]
+        roots = [ComplexNumber(magnitude * math.cos(angle),
+                               magnitude * math.sin(angle)) for angle in angles]
         return roots
 
 
+
 # %%
+class RealNumber(ComplexNumber):
+
+    def __init__(self, value: float, imag=0):
+        super().__init__(real=value, imag=0)
+
+    def __add__():
+        pass
+    
+
+
+# %%
+x1 = RealNumber(3)
+
+# %%
+x1
+
+# %%
+x2 = RealNumber(4)
+
+# %%
+type(x1 + x2)
+
+# %%
+x1.angle
+
+# %%
+RealNumber(-4).angle
+
+# %%
+RealNumber(-4).nth_root(2)
 
 # %%
 
 # %%
-z1 = ComplexNumber(1, -1)
-z2 = ComplexNumber(2, 4)
-
-z1 + z2
 
 # %%
-z1.angle
-
-# %%
-z1.real = 0
-
-# %%
-z1.angle
 
 # %%
