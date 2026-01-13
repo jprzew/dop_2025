@@ -1,0 +1,6 @@
+[core]
+    remote = ssh-storage
+['remote "ssh-storage"']
+    url = ssh://153.19.8.113/home/test2/dop_data
+    user = test2
+    port = 22
