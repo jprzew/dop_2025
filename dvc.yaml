@@ -4,6 +4,6 @@ stages:
     deps:
     - data\correct_recordings.txt
     - data\eda_anon.pkl
-    - src\calculator.py
+    - src\create_plots.py
     outs:
     - plots\input_signals\
