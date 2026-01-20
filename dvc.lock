@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  plot_signals:
+    cmd: python src\create_plots.py
+    deps:
+    - path: data\correct_recordings.txt
+      hash: md5
+      md5: a3b806680062171079e2e9026acadf37
+      size: 12101
+    - path: data\eda_anon.pkl
+      hash: md5
+      md5: 35aa9909aaf46831096077df649b894d
+      size: 10285618
+    - path: src\create_plots.py
+      hash: md5
+      md5: 0add20fd8bceaaa66fe905a0e8928459
+      size: 1795
+    outs:
+    - path: plots\input_signals\
+      hash: md5
+      md5: 13f2a4930eb3c496de3dbd2b3c71fa48.dir
+      size: 786504
+      nfiles: 30
