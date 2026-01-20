@@ -5,3 +5,4 @@ nb-mypy
 jupytext
 dvc
 dvc-ssh
+matplotlib
