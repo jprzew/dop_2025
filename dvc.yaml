@@ -1,0 +1,9 @@
+stages:
+  plot_signals:
+    cmd: python src\create_plots.py
+    deps:
+    - data\correct_recordings.txt
+    - data\eda_anon.pkl
+    - src\calculator.py
+    outs:
+    - plots\input_signals\
