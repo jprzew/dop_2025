@@ -37,3 +37,24 @@ stages:
       hash: md5
       md5: c4ad6a8c5679c28c1827969cda753305
       size: 70264
+  plot_histograms:
+    cmd: python src\create_hist_plots.py
+    deps:
+    - path: data\correct_recordings.txt
+      hash: md5
+      md5: a3b806680062171079e2e9026acadf37
+      size: 12101
+    - path: data\histograms.csv
+      hash: md5
+      md5: c4ad6a8c5679c28c1827969cda753305
+      size: 70264
+    - path: src\create_hist_plots.py
+      hash: md5
+      md5: 2e30c6879ca79f410d89196569390b33
+      size: 3171
+    outs:
+    - path: plots\histograms\
+      hash: md5
+      md5: f24901e7c7635abad3666c7703348a15.dir
+      size: 555233
+      nfiles: 31

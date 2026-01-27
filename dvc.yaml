@@ -14,3 +14,11 @@ stages:
     - src\compute_histograms.py
     outs:
     - data\histograms.csv
+  plot_histograms:
+    cmd: python src\create_hist_plots.py
+    deps:
+    - data\histograms.csv
+    - data\correct_recordings.txt
+    - src\create_hist_plots.py
+    outs:
+    - plots\histograms\

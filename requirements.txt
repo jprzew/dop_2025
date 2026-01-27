@@ -237,6 +237,8 @@ jinja2==3.1.6
     #   jupyterlab
     #   jupyterlab-server
     #   nbconvert
+joblib==1.5.3
+    # via scikit-learn
 json5==0.12.1
     # via jupyterlab-server
 jsonpointer==3.0.0
@@ -314,7 +316,9 @@ markupsafe==3.0.3
     #   jinja2
     #   nbconvert
 matplotlib==3.10.8
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   seaborn
 matplotlib-inline==0.2.1
     # via
     #   ipykernel
@@ -363,6 +367,9 @@ numpy==2.3.4
     #   contourpy
     #   matplotlib
     #   pandas
+    #   scikit-learn
+    #   scipy
+    #   seaborn
 omegaconf==2.3.0
     # via
     #   dvc
@@ -385,7 +392,9 @@ packaging==25.0
     #   matplotlib
     #   nbconvert
 pandas==2.3.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   seaborn
 pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.5
@@ -517,10 +526,16 @@ ruamel-yaml==0.19.1
     # via
     #   dvc
     #   gto
+scikit-learn==1.8.0
+    # via -r requirements.in
+scipy==1.17.0
+    # via scikit-learn
 scmrepo==3.6.1
     # via
     #   dvc
     #   gto
+seaborn==0.13.2
+    # via -r requirements.in
 semver==3.0.4
     # via gto
 send2trash==1.8.3
@@ -558,6 +573,8 @@ terminado==0.18.1
     # via
     #   jupyter-server
     #   jupyter-server-terminals
+threadpoolctl==3.6.0
+    # via scikit-learn
 tinycss2==1.4.0
     # via bleach
 tomlkit==0.14.0

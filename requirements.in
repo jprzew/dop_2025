@@ -6,3 +6,5 @@ jupytext
 dvc
 dvc-ssh
 matplotlib
+scikit-learn
+seaborn
