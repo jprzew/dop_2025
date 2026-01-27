@@ -10,7 +10,7 @@ stages:
   compute_histograms:
     cmd: python src\compute_histograms.py
     deps:
-      - data\eda_anon.pkl
-      - src\compute_histograms.py
+    - data\eda_anon.pkl
+    - src\compute_histograms.py
     outs:
-      - data\histograms.csv
+    - data\histograms.csv
