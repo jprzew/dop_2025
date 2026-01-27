@@ -21,3 +21,19 @@ stages:
       md5: 13f2a4930eb3c496de3dbd2b3c71fa48.dir
       size: 786504
       nfiles: 30
+  compute_histograms:
+    cmd: python src\compute_histograms.py
+    deps:
+    - path: data\eda_anon.pkl
+      hash: md5
+      md5: 35aa9909aaf46831096077df649b894d
+      size: 10285618
+    - path: src\compute_histograms.py
+      hash: md5
+      md5: 9a7b78511a7c434dc11e21012b3fef18
+      size: 1861
+    outs:
+    - path: data\histograms.csv
+      hash: md5
+      md5: c4ad6a8c5679c28c1827969cda753305
+      size: 70264

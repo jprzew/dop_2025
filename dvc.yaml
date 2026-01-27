@@ -7,3 +7,10 @@ stages:
     - src\create_plots.py
     outs:
     - plots\input_signals\
+  compute_histograms:
+    cmd: python src\compute_histograms.py
+    deps:
+      - data\eda_anon.pkl
+      - src\compute_histograms.py
+    outs:
+      - data\histograms.csv
